@@ -7,7 +7,25 @@
 /*-------*/
 
 /*----GENERAL----*/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.my-button{}
+
+.my-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+main div.container > div.my-row{
+    height: 100%;
+    justify-content: space-between;
+    align-content: space-between;
+}
 
 /*---------------*/
 
@@ -17,4 +35,38 @@
 
     background-color: aqua;
     border: 3px dashed red;
+}
+
+.debug main{
+    height: calc(100vh - 150px );
+    background-color: brown;
+    border: solid green 3px;
+}
+
+.debug main > .upper-selection-bar{
+    height: 50px;
+    background-color: orange;
+    border: solid black 3px;
+}
+
+.debug main > .container{
+    height: calc(100% - 50px);
+    background-color: blue;
+    border: solid black 3px;
+}
+
+.debug main .card{
+    height: calc((100% / 5) - 20px);
+    width: calc((100% / 7) - 10px);
+
+    background-color: pink;
+    border: 1px solid black;
+
+    
+}
+
+.debug .foot-bar{
+    height: 150px;
+    background-color: goldenrod;
+    border: dashed blueviolet 3px;
 }
