@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 /*-------*/
 
@@ -10,16 +11,60 @@
 .container{
     max-width: 1200px;
     margin: 0 auto;
+    height: calc(100% - 15%);
 }
 
-.my-button{}
+.my-button{
+    background-color: #4A4A4A;
+    border-radius: 10% / 30%;
+    padding:.5em;
+    font-size: small;
+}
+
+.my-button.squared{
+    border-radius: 25%;
+}
+
+div > .my-button{
+    display: inline-block;
+}
+
+.white-text{
+    color: white;
+}
 
 .my-row{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+/*---------------*/
+
+/* MAIN */
+main{
+    height: calc(100vh - 100px);
+    background-color: #000000;
+    padding-bottom:30px;
+}
+
+.upper-selection-bar{
+    position: relative;
+    height: 10%;
 }
 
 
+.button-container{
+    position: absolute;
+    right: 1%;
+    top: 5%;
+    
+}
 
 main div.container > div.my-row{
     height: 100%;
@@ -27,46 +72,113 @@ main div.container > div.my-row{
     align-content: space-between;
 }
 
-/*---------------*/
+.card{
+    height: calc((((100vh - 100px) - 10 / 100) / 5) - 20px);
+    width: calc((100% / 7) - 10px);
+
+}
+
+.img-container{
+    position: relative;
+    width: 100%;
+}
+
+.info-tag{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.img-container > .info-tag{
+    padding: .5em;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.info-tag > *{
+    display: inline-block;
+}
+
+
+/* MAIN */
+
+/* FOOTER */
+.foot-bar{
+    height: 100px;
+    background-color: #222222;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+.user-commands, .utility-commands{
+    color: white;
+}
+
+.user-commands > div{
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+
+}
+.user-commands > div > div{
+    display: inline-block;
+
+}
+
+.user-commands > div > div:nth-child(1) {
+    font-size: 2em;
+    text-align: center;
+
+}
+
+.user-commands > div > div:nth-child(1) div, .user-commands > div > div:nth-child(2) div{
+    font-size: .5em;
+
+}
+
+.user-commands > div > div i +{
+    font-size: 1em;
+    vertical-align: top;
+
+}
+
+
+/* FOOTER */
 
 /*-------DEBUG---------*/
 
 .debug{
 
     background-color: aqua;
-    border: 3px dashed red;
 }
 
-.debug main{
+/* .debug main{
     height: calc(100vh - 150px );
     background-color: brown;
     border: solid green 3px;
-}
+} */
 
-.debug main > .upper-selection-bar{
+/* .debug main > .upper-selection-bar{
     height: 50px;
     background-color: orange;
     border: solid black 3px;
-}
+} */
 
-.debug main > .container{
+/* .debug main > .container{
     height: calc(100% - 50px);
     background-color: blue;
     border: solid black 3px;
-}
+} */
 
-.debug main .card{
-    height: calc((100% / 5) - 20px);
-    width: calc((100% / 7) - 10px);
-
+/* .debug main .card{
     background-color: pink;
     border: 1px solid black;
 
     
-}
+} */
 
 .debug .foot-bar{
-    height: 150px;
-    background-color: goldenrod;
-    border: dashed blueviolet 3px;
+    height: 100px;
+    background-color: #222222;
 }
