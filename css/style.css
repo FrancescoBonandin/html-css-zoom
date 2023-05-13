@@ -108,6 +108,7 @@ main div.container > div.my-row{
     background-color: #222222;
     justify-content: space-between;
     align-items: center;
+    align-content: space-between;
     position: relative;
     z-index: 0;
 }
@@ -118,67 +119,48 @@ main div.container > div.my-row{
 
 .user-commands > div{
     display: inline-block;
-    margin: 10px 10px 10px 0;
+    margin: 10px 10px 10px 10px;
 
 }
-.user-commands > div > div{
+
+
+.user-commands > div > div:nth-child(1), .utility-commands > div {
+    display: inline-block;
+    font-size: 2em;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+}
+
+div.user-commands div > div:nth-child(1) > div.foot-bar-text, div.utility-commands div > .foot-bar-text{
+    font-size: .5em;
+    text-align: center;
+}
+
+.user-commands > div > div.chevron, .utility-commands > div div.chevron {
+    font-size: .5rem;
+    vertical-align: top;
+    color: white;
+    display: inline-block;
+}
+
+.utility-commands > div{
     display: inline-block;
 
 }
 
-.user-commands > div > div:nth-child(1) {
-    font-size: 2em;
-    text-align: center;
+.utility-commands > div.green > i{
+    color: green;
+    display: inline-block;
+}
+
+.foot-bar > .end-meeting{
+    border: 1px solid red;
+    color: red;
+    padding: 1em;
 
 }
 
-.user-commands > div > div:nth-child(1) div, .user-commands > div > div:nth-child(2) div{
-    font-size: .5em;
 
-}
-
-.user-commands > div > div i +{
-    font-size: 1em;
-    vertical-align: top;
-
-}
 
 
 /* FOOTER */
-
-/*-------DEBUG---------*/
-
-.debug{
-
-    background-color: aqua;
-}
-
-/* .debug main{
-    height: calc(100vh - 150px );
-    background-color: brown;
-    border: solid green 3px;
-} */
-
-/* .debug main > .upper-selection-bar{
-    height: 50px;
-    background-color: orange;
-    border: solid black 3px;
-} */
-
-/* .debug main > .container{
-    height: calc(100% - 50px);
-    background-color: blue;
-    border: solid black 3px;
-} */
-
-/* .debug main .card{
-    background-color: pink;
-    border: 1px solid black;
-
-    
-} */
-
-.debug .foot-bar{
-    height: 100px;
-    background-color: #222222;
-}
